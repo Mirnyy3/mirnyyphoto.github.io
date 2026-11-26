@@ -5,59 +5,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Фотограф Игорь Мирный</title>
-<meta name="description" content="Игорь Мирный — фотограф из Белгорода. Репортажная и индивидуальная съёмка.">
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
- margin:0;background:#11100f;color:#eee8df;
- font-family:Georgia,'Times New Roman',serif;
-}
+body{margin:0;background:#11100f;color:#eee8df;font-family:Georgia,serif}
 a{color:inherit;text-decoration:none}
-header{
- padding:28px 7%;display:flex;justify-content:space-between;
- align-items:center;border-bottom:1px solid #39332e;
-}
-.logo{font-size:21px;letter-spacing:1px}
-nav{display:flex;gap:25px;font:13px Arial,sans-serif}
+header{padding:28px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #39332e}
+.logo{font-size:21px}
+nav{display:flex;gap:25px;font:13px Arial}
 nav a,.socials a{color:#b9aaa0}
-nav a:hover,.socials a:hover{color:#fff}
-.hero{padding:105px 7% 85px;max-width:1100px}
-.eyebrow{
- color:#a98d73;text-transform:uppercase;
- letter-spacing:4px;font:11px Arial,sans-serif
-}
+.hero{padding:100px 7% 75px}
+.eyebrow{color:#a98d73;text-transform:uppercase;letter-spacing:4px;font:11px Arial}
 h1{font-size:clamp(43px,8vw,88px);font-weight:normal;line-height:1.02;margin:22px 0}
 .intro{max-width:650px;color:#c5bcb3;font-size:19px;line-height:1.8}
 section{padding:55px 7% 85px}
 .section-title{font-size:38px;font-weight:normal;margin:0 0 12px}
-.section-desc{color:#a99d93;font:14px Arial,sans-serif;margin-bottom:35px}
+.section-desc{color:#a99d93;font:14px Arial;margin-bottom:35px}
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .photo{margin:0;background:#1b1917;overflow:hidden}
-.photo img{
- display:block;width:100%;height:480px;object-fit:cover;
- filter:brightness(.82) contrast(1.05);
- transition:transform .5s,filter .5s;
-}
+.photo img{display:block;width:100%;height:480px;object-fit:cover;filter:brightness(.85) contrast(1.05);transition:.5s}
 .photo:hover img{transform:scale(1.025);filter:brightness(1)}
 .photo figcaption{padding:17px 18px;color:#c8b9aa;font-size:17px}
-.single{max-width:760px}
-.single img{height:540px}
-.about{
- border-top:1px solid #39332e;border-bottom:1px solid #39332e;
- padding:65px 7%;
-}
+.cover-link{display:block;max-width:760px}
+.cover-link:hover img{filter:brightness(1)}
+.cover-link .photo img{height:540px}
+.about{border-top:1px solid #39332e;border-bottom:1px solid #39332e;padding:65px 7%}
 .about p{max-width:650px;color:#c5bcb3;line-height:1.8;font-size:18px}
+#concert-gallery{scroll-margin-top:20px}
+#concert-photos{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+#concert-photos img{width:100%;height:420px;object-fit:cover;background:#1b1917}
+.gallery-message{color:#a99d93;font:14px Arial;line-height:1.7}
 footer{padding:45px 7%;text-align:center}
 footer h2{font-weight:normal;font-size:30px}
-.socials{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;font:14px Arial,sans-serif}
-.small{margin-top:35px;color:#776e67;font:12px Arial,sans-serif}
+.socials{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;font:14px Arial}
+.small{margin-top:35px;color:#776e67;font:12px Arial}
 @media(max-width:650px){
  header{align-items:flex-start;gap:18px;flex-direction:column}
  nav{gap:17px;flex-wrap:wrap}
- .hero{padding-top:75px}
- .gallery{grid-template-columns:1fr}
- .photo img,.single img{height:420px}
+ .hero{padding-top:70px}
+ .gallery,#concert-photos{grid-template-columns:1fr}
+ .photo img,.cover-link .photo img,#concert-photos img{height:420px}
  .section-title{font-size:32px}
 }
 </style>
@@ -67,7 +54,7 @@ footer h2{font-weight:normal;font-size:30px}
 <header>
  <a class="logo" href="#">Игорь Мирный</a>
  <nav>
-  <a href="#reportage">Репортаж</a>
+  <a href="#reportage">Концерты</a>
   <a href="#individual">Индивидуальные съёмки</a>
   <a href="#contacts">Контакты</a>
  </nav>
@@ -86,13 +73,21 @@ footer h2{font-weight:normal;font-size:30px}
  </div>
 
  <section id="reportage">
-  <h2 class="section-title">Репортажная съёмка</h2>
-  <p class="section-desc">События, люди и настоящие моменты</p>
-  <div class="gallery single">
+  <h2 class="section-title">Концерты</h2>
+  <p class="section-desc">Музыка, свет, эмоции и живые моменты</p>
+  <a class="cover-link" href="#concert-gallery">
    <figure class="photo">
-    <img src="images/individual/images/reportage/IMG_7350.JPG" alt="Репортажная фотография">
-    <figcaption>Репортаж · Жизнь в кадре</figcaption>
+    <img src="images/reportage/2025-04-05%2020-59-30.JPG" alt="Концертная фотография">
+    <figcaption>Концерты</figcaption>
    </figure>
+  </a>
+ </section>
+
+ <section id="concert-gallery">
+  <h2 class="section-title">Фотографии с концертов</h2>
+  <p class="section-desc">Репортажная съёмка</p>
+  <div id="concert-photos">
+   <p class="gallery-message">Загружаем фотографии...</p>
   </div>
  </section>
 
@@ -132,6 +127,35 @@ footer h2{font-weight:normal;font-size:30px}
  </div>
  <div class="small">© Игорь Мирный · 2026</div>
 </footer>
+
+<script>
+async function loadConcertPhotos(){
+ const gallery=document.getElementById('concert-photos');
+ try{
+  const response=await fetch('https://api.github.com/repos/Mirnyy3/mirnyyphoto.github.io/contents/images/reportage');
+  if(!response.ok) throw new Error('Не удалось получить список фотографий');
+  const files=await response.json();
+  const photos=files.filter(file=>
+   file.type==='file' && /\.(jpe?g|png|webp|gif)$/i.test(file.name)
+  );
+  gallery.innerHTML='';
+  if(!photos.length){
+   gallery.innerHTML='<p class="gallery-message">В папке пока нет фотографий.</p>';
+   return;
+  }
+  photos.forEach(file=>{
+   const img=document.createElement('img');
+   img.src=file.download_url;
+   img.alt='Концертная фотография';
+   img.loading='lazy';
+   gallery.appendChild(img);
+  });
+ }catch(error){
+  gallery.innerHTML='<p class="gallery-message">Не удалось загрузить галерею. Обновите страницу чуть позже.</p>';
+ }
+}
+loadConcertPhotos();
+</script>
 
 </body>
 </html>
